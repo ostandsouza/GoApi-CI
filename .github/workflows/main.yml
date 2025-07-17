@@ -1,0 +1,8 @@
+name: go_workflow
+on: workflow_dispatch
+jobs:
+  test_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print step
+        run: echo "test run"
