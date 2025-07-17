@@ -5,4 +5,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print step
-        run: echo "test run"
+        run: |
+            echo "test run 1"
+            echo "test run 2"
+  second_job:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: checkout repo
+        uses: actions/checkout@v3
+      - name: install golang
+        uses: actions/setup-go@v5
+      - name: run main file
+        run: go run main.go
+        
+        
